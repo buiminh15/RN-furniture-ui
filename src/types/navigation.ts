@@ -1,16 +1,12 @@
 export type MainStackParamList = {
-  MainStackScreen: BottomTabNavigatorParamList;
-  DetailScreen: undefined;
-  ViewAllScreen: {
-    name: string;
-  };
-  EditProfileScreen: undefined;
+  Onboard: undefined;
+  BottomTabStack: undefined;
 };
-
 
 export type BottomTabNavigatorParamList = {
   Home: undefined;
-  Booking: undefined;
-  WatchList: undefined;
+  Favorite: undefined;
+  QR: undefined;
+  Cart: undefined;
   Profile: undefined;
 };

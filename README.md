@@ -1,6 +1,6 @@
 ### Inspiration
 
-[Please support author if you like his/her works](<https://www.figma.com/file/lVwITiWfcPPSfxfjwv95Cz/Hoteliq---Booking-Hotel-App-Design-(Community)?type=design&node-id=23-142&mode=design&t=d45r0QrxuaGow1iy-0>)
+[Please support author if you like his/her works](https://www.figma.com/file/jBzySrb40hTBxIclO9xF4N/Mobile-App-for-furniture-with-Prototype-(Community)?node-id=63%3A97&mode=dev)
 
 ### Tech
 
