@@ -4,3 +4,4 @@ export {default as CartScreen} from './CartScreen';
 export {default as ProfileScreen} from './ProfileScreen';
 export {default as FavoriteScreen} from './FavoriteScreen';
 export {default as QRScreen} from './QRScreen';
+export {default as EmptyScreen} from './EmptyScreen';

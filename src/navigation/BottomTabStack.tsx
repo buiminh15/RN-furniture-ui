@@ -2,7 +2,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeScreen} from '../screens';
 import React from 'react';
 import {BOTTOM_NAVS, COLORS, SIZES} from '../../constants';
-import {ms, vs} from 'react-native-size-matters';
+import {ms, s, vs} from 'react-native-size-matters';
 
 const Tab = createBottomTabNavigator();
 
@@ -10,6 +10,13 @@ function BottomTabStack() {
   return (
     <Tab.Navigator
       initialRouteName="Home"
+      screenListeners={{
+        tabPress: e => {
+          // Prevent default action
+          e.preventDefault();
+          console.log('📢 [BottomTabStack.tsx:18]', e.target);
+        },
+      }}
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
@@ -17,8 +24,9 @@ function BottomTabStack() {
         tabBarInactiveTintColor: COLORS.gray,
         tabBarStyle: {
           height: vs(50),
-          borderTopLeftRadius: ms(SIZES.padding),
-          borderTopRightRadius: ms(SIZES.padding),
+          borderRadius: ms(SIZES.padding),
+          bottom: vs(SIZES.padding),
+          marginHorizontal: s(SIZES.base),
         },
       }}>
       {BOTTOM_NAVS.map(nav => (

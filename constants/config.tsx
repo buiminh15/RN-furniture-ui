@@ -1,17 +1,18 @@
 import React from 'react';
-import {BottomTabNavigatorParamList} from '../src/types';
+import {TouchableOpacity, View} from 'react-native';
+import {Icon} from 'react-native-eva-icons';
+import {ms, vs} from 'react-native-size-matters';
+import {BottomIcon} from '../src/components';
 import {
   CartScreen,
+  EmptyScreen,
   FavoriteScreen,
   HomeScreen,
   ProfileScreen,
   QRScreen,
 } from '../src/screens';
-import {BottomIcon} from '../src/components';
-import {Pressable, StyleSheet} from 'react-native';
-import {Icon} from 'react-native-eva-icons';
 import {commonStyles} from '../src/styles';
-import {ms, vs} from 'react-native-size-matters';
+import {BottomTabNavigatorParamList} from '../src/types';
 import {COLORS} from './theme';
 
 type BottomTypes = keyof BottomTabNavigatorParamList;
@@ -25,7 +26,7 @@ export type BottomIconType = {
 type BottomTabsType = {
   id: number;
   name: BottomTypes;
-  component: () => React.JSX.Element;
+  component: (el?: any) => React.JSX.Element;
   icon: ({focused, color, size}: BottomIconType) => React.JSX.Element;
 };
 
@@ -61,9 +62,9 @@ const BOTTOM_NAVS: BottomTabsType[] = [
   {
     id: 3,
     name: 'QR',
-    component: QRScreen,
+    component: EmptyScreen,
     icon: ({focused, color, size}: BottomIconType) => (
-      <Pressable
+      <TouchableOpacity
         style={[
           commonStyles.itemsCenter,
           commonStyles.justifyCenter,
@@ -79,7 +80,7 @@ const BOTTOM_NAVS: BottomTabsType[] = [
           },
         ]}>
         <Icon name="camera-outline" width={30} height={30} fill={'white'} />
-      </Pressable>
+      </TouchableOpacity>
     ),
   },
   {

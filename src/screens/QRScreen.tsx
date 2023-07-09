@@ -1,7 +1,21 @@
 import React from 'react';
-import {Linking, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {
+  Linking,
+  Pressable,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {BarCodeReadEvent, RNCamera} from 'react-native-camera';
 import QRCodeScanner from 'react-native-qrcode-scanner';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {commonStyles} from '../styles';
+import {COLORS} from '../../constants';
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
+import {BottomTabNavigatorParamList} from '../types';
+import {ButtonIcon, Text} from '../components';
+
+type Props = BottomTabScreenProps<BottomTabNavigatorParamList, 'QR'>;
 
 const QRScreen = () => {
   const onSuccess = (e: BarCodeReadEvent) => {
@@ -10,37 +24,35 @@ const QRScreen = () => {
     );
   };
   return (
-    <QRCodeScanner
-      onRead={onSuccess}
-      flashMode={RNCamera.Constants.FlashMode.torch}
-      topContent={
-        <Text style={styles.centerText}>
-          Go to <Text style={styles.textBold}>wikipedia.org/wiki/QR_code</Text>{' '}
-          on your computer and scan the QR code.
-        </Text>
-      }
-      bottomContent={
-        <TouchableOpacity style={styles.buttonTouchable}>
-          <Text style={styles.buttonText}>OK. Got it!</Text>
-        </TouchableOpacity>
-      }
-    />
+    <SafeAreaView style={[commonStyles.flex1, styles.container]}>
+      <View
+        style={[
+          commonStyles.paddingHorizontal,
+          commonStyles.mtContainer,
+          commonStyles.bgRed,
+        ]}>
+        <ButtonIcon nameIcon="arrow-back-outline" />
+      </View>
+      <QRCodeScanner
+        containerStyle={[commonStyles.bgWhite]}
+        onRead={onSuccess}
+        bottomContent={
+          <TouchableOpacity style={styles.buttonTouchable}>
+            <Text style={styles.buttonText}>OK. Got it!</Text>
+          </TouchableOpacity>
+        }
+      />
+    </SafeAreaView>
   );
 };
 
 export default QRScreen;
 
 const styles = StyleSheet.create({
-  centerText: {
-    flex: 1,
-    fontSize: 18,
-    padding: 32,
-    color: '#777',
+  container: {
+    backgroundColor: COLORS.black,
   },
-  textBold: {
-    fontWeight: '500',
-    color: '#000',
-  },
+
   buttonText: {
     fontSize: 21,
     color: 'rgb(0,122,255)',

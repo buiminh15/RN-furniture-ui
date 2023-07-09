@@ -1,6 +1,7 @@
 export type MainStackParamList = {
   Onboard: undefined;
   BottomTabStack: undefined;
+  QRScreen: undefined;
 };
 
 export type BottomTabNavigatorParamList = {
