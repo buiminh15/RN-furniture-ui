@@ -1,6 +1,6 @@
 ### Inspiration
 
-[Please support author if you like his/her works](https://www.figma.com/file/jBzySrb40hTBxIclO9xF4N/Mobile-App-for-furniture-with-Prototype-(Community)?node-id=63%3A97&mode=dev)
+[Please support author if you like his/her works](<https://www.figma.com/file/jBzySrb40hTBxIclO9xF4N/Mobile-App-for-furniture-with-Prototype-(Community)?node-id=63%3A97&mode=dev>)
 
 ### Tech
 
@@ -27,3 +27,5 @@
 ### File Apk
 
 [File APK](https://drive.google.com/drive/folders/1Nkx6-TN8c8bKGweiykrRgtLT_poynUuh?usp=sharing)
+
+https://dev.to/codemaker2015/qr-code-scanner-app-using-react-native-eog

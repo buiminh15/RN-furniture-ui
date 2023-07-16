@@ -12,6 +12,10 @@ export const profile4 = require('../assets/images/profile_4.jpg');
 export const profile5 = require('../assets/images/profile_5.jpg');
 export const bannerBg = require('../assets/images/banner_bg.jpg');
 export const bg = require('../assets/images/bg.png');
+export const bottomPanel = require('../assets/images/bottom-panel.png');
+export const qrCode = require('../assets/images/qr-code.png');
+export const camera = require('../assets/images/camera.png');
+export const camera2 = require('../assets/images/camera-2.png');
 
 export default {
   plant1,
@@ -28,4 +32,8 @@ export default {
   profile5,
   bannerBg,
   bg,
+  bottomPanel,
+  qrCode,
+  camera,
+  camera2,
 };

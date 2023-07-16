@@ -21,6 +21,9 @@ export const commonStyles = StyleSheet.create({
   justifyEnd: {
     justifyContent: 'flex-end',
   },
+  itemsStart: {
+    alignItems: 'flex-start',
+  },
   itemsCenter: {
     alignItems: 'center',
   },
